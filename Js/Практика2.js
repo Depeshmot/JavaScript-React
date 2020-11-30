@@ -64,7 +64,7 @@ if (personalMovieDB.count < 10) {
     console.log('Вы киноман');
     //Условие: если ни один из сценариев не выполнился, то выдается соответствующее сообщение
 }   else {
-    console.log('Произошла ошибка, повторите сценарий')
+    console.log('Произошла ошибка, повторите сценарий');
 }
 
 
@@ -72,6 +72,16 @@ console.log(personalMovieDB);
 
 
 //Ответ
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+
 for (let i = 0; i < 2; i++) {
     const a = prompt('Один из последних просмотренных фильмов?', '');
           b = prompt('На сколько оцените его?', ''); 
@@ -95,3 +105,11 @@ for (let i = 0; i < 2; i++) {
     }
 
     console.log(personalMovieDB);
+
+
+    //Задача. Выведите столбец чисел от 1 до 50.
+
+for (var i = 1; i <= 50; i++) {
+    document.write(i + "<br>");
+}
+
