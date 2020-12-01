@@ -72,7 +72,7 @@ console.log(personalMovieDB);
 
 
 //Ответ
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
+const  numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '');
 
 const personalMovieDB = {
     count: numberOfFilms,
@@ -82,34 +82,35 @@ const personalMovieDB = {
     privat: false
 };
 
-for (let i = 0; i < 2; i++) {
-    const a = prompt('Один из последних просмотренных фильмов?', '');
-          b = prompt('На сколько оцените его?', ''); 
-}
+//Один из последних просмотренных фильмов
+//На сколько оцените его?
 
-    if (a != null && b != null && a != "" && b != "" && a.length < 50) {
+for (let i = 0; i < 4; i++) {
+    const a = prompt('Один из последних просмотренных фильмов', ''),
+    b = prompt('На сколько оцените его?', '');
+    if (a != null && b != null && a != '' && b != '') {
         personalMovieDB.movies[a] = b;
         console.log('Done');
-    }   else {
-        console.log('Error');
-    }   i--;   
-
-    if (personalMovieDB.count < 10) {
-        console.log('Просомтрено мало фильмов');
-    }   else if (personalMovieDB.count <= 10 && personalMovieDB.count > 30) {
-        console.log('Вы классический зритель');
-    }   else if (personalMovieDB.count > 30) {
-        console.log('Вы киноман');
-    }   else {
-        console.log('Произошла ошибка');
+    } else {
+        console.log('Error')
+        i--;
     }
-
-    console.log(personalMovieDB);
-
-
-    //Задача. Выведите столбец чисел от 1 до 50.
-
-for (var i = 1; i <= 50; i++) {
-    document.write(i + "<br>");
 }
 
+//Просмотрено довольно мало фильмов
+//Вы классический зритель
+//Вы киноман
+//Произошла ошибка, повторите сценарий
+
+
+if (personalMovieDB.count < 10) {
+    console.log('Просмотрено довольно мало фильмов');
+}   else if (personalMovieDB.count <= 10 && personalMovieDB.count < 30) {
+    console.log('Вы классический зритель');
+}   else if (personalMovieDB.count >= 30) {
+    console.log('Вы киноман');
+}   else {
+    console.log('Что пошло не так');
+}
+
+console.log(personalMovieDB);
