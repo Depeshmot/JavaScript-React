@@ -92,7 +92,7 @@ for (let i = 0; i < 4; i++) {
         personalMovieDB.movies[a] = b;
         console.log('Done');
     } else {
-        console.log('Error')
+        console.log('Error');
         i--;
     }
 }
