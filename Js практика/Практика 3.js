@@ -18,7 +18,7 @@ const personalMovieDB = {
     movies: {},
     actors: {},
     genres: [],
-    privat: false
+    privat: true
 };
 
 function rememberMyFilms () {
@@ -35,7 +35,7 @@ function rememberMyFilms () {
     }
 }
 
-//rememberMyFilms();
+rememberMyFilms();
 
 function detectPersonalLevel () {
     if (personalMovieDB.count < 10) {
@@ -50,7 +50,7 @@ function detectPersonalLevel () {
     
 }
 
-//detectPersonalLevel();
+detectPersonalLevel();
 
 function showMyDB (hidden) {
     if (!hidden) {
@@ -61,7 +61,7 @@ function showMyDB (hidden) {
 showMyDB(personalMovieDB.privat);
 
 
-//console.log(personalMovieDB);
+console.log(personalMovieDB);
 
 
 function writeYourGenres() {

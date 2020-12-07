@@ -55,3 +55,5 @@ function compareNum(a, b) {
 }
 
 //Псевдомассивы 
+
+
