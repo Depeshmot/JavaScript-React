@@ -57,3 +57,12 @@ function compareNum(a, b) {
 //Псевдомассивы 
 
 
+let arr = ['Я', 'читаю', 'книгу', 'прямо', 'сейчас'];
+
+arr.splice(-0, 3, 'очень', 'интересно');
+
+console.log(arr);
+
+let arr = ['1, 2'];
+
+let pushArr = arr.push('3,4');

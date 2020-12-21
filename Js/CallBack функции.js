@@ -28,3 +28,44 @@ function learnJS(lang, callback) {
 learnJS('JavaScript', function() {
     console.log('Я прошел этот урок');
 });
+
+// Пример
+
+function doHomework (subject) {
+    alert(`Starting my ${subject} homework.`);
+}
+
+doHomework('math');
+
+//добавляем callback функцию
+
+function doHomework (subject, callback) {
+    alert(`Starting ,y ${subject} homework.`);
+    callback();
+}
+
+doHomework('math', function() {
+    alert('Finished my home work');
+});
+
+// Другой варинат решения
+
+function doHomework(subject, callback) {
+    alert(`Starting my ${subject} homework.`);
+    callback();
+}
+function alertFinished(){
+    alert('Finished my homework');
+}
+doHomework('math', alertFinished);
+
+function makeFood (ingridients, callback) {
+    alert(`I making ${ingridients} wis salat`);
+    callback();
+}
+
+function watchFilm () {
+    alert('and after that, I go to sleep');
+}
+
+makeFood('bekon with eggs', watchFilm);
